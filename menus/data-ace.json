@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle data-ace",
+        "command": "data-ace:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "data-ace",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "data-ace:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
