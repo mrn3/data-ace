@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "data-ace:toggle"
   },
-  "repository": "https://github.com/atom/data-ace",
+  "repository": "https://github.com/mrn3/data-ace",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
