@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle data-ace",
+        "label": "Toggle Data Ace",
         "command": "data-ace:toggle"
       }
     ]
@@ -12,7 +12,7 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "data-ace",
+          "label": "Data Ace",
           "submenu": [
             {
               "label": "Toggle",
