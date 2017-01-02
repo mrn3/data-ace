@@ -13,8 +13,6 @@
     'submenu': [
       'label': 'Data Ace'
       'submenu': [
-        { 'label': 'New Connection...', 'command': 'data-ace:new-connection' }
-        { 'label': 'Execute', 'command': 'data-ace:execute' }
         { 'label': 'Toggle results view', 'command': 'data-ace:toggle-results-view' }
         { 'label': 'Toggle details view', 'command': 'data-ace:toggle-details-view' }
         { 'label': 'Edit connections', 'command': 'data-ace:edit-connections' }
