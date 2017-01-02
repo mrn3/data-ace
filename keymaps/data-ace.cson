@@ -8,9 +8,11 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 'atom-workspace':
-  'alt-shift-r': 'data-ace:toggle-results-view'
-  'alt-shift-d': 'data-ace:toggle-details-view'
+  'alt-shift-d': 'data-ace:toggle-results-view'
   'f5': 'data-ace:execute'
 
 '.platform-darwin atom-workspace':
-    'cmd-alt-r': 'data-ace:toggle-results-view'
+  'cmd-enter': 'data-ace:execute'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-enter': 'data-ace:execute'
