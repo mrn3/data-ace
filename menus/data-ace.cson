@@ -1,0 +1,24 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    { 'label': 'Data Ace - Execute', 'command': 'data-ace:execute' }
+  ],
+  '.db-list .table-name': [
+    { 'label': 'Query Table', 'command': 'data-ace:query-table' }
+  ]
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Data Ace'
+      'submenu': [
+        { 'label': 'New Connection...', 'command': 'data-ace:new-connection' }
+        { 'label': 'Execute', 'command': 'data-ace:execute' }
+        { 'label': 'Toggle results view', 'command': 'data-ace:toggle-results-view' }
+        { 'label': 'Toggle details view', 'command': 'data-ace:toggle-details-view' }
+        { 'label': 'Edit connections', 'command': 'data-ace:edit-connections' }
+      ]
+    ]
+  }
+]
