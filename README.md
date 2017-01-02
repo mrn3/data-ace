@@ -1,14 +1,15 @@
 # Data Ace package
 
-Data Ace allows you to write and execute queries against your favorite databases (PostgreSQL, MS SQL Server, MySQL) and visualize the results, all from within Atom. It supports autocomplete and exploring database information (tables, columns, views, etc.). The plan is to build it out with more data management functionality.
+Data Ace allows you to write and execute queries against your favorite databases (PostgreSQL, MS SQL Server, MySQL, Redshift) and visualize the results, all from within Atom. It supports autocomplete and exploring database information (tables, columns, views, etc.). The plan is to build it out with more data management functionality.
 
 Feel free to open issues or make pull requests!
 
 ##Features
 - Supports
-  - PostgreSQL
   - Microsoft SQL Server
   - MySQL (Beta support, see issues for known problems)
+  - PostgreSQL
+  - Redshift
 - Execute custom queries or a whole file
   - Separate results for each file/editor view
   - Different connections per editor view
