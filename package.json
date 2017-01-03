@@ -1,7 +1,7 @@
 {
   "name": "data-ace",
   "main": "./lib/data-ace",
-  "version": "0.24.5",
+  "version": "0.24.6",
   "description": "Query and manage data sources (databases) from within Atom",
   "activationCommands": [],
   "repository": "https://github.com/mrn3/data-ace",
