@@ -55,7 +55,7 @@ Some details about the project that are relevant to contributors:
   - Check out `data-manager.js` for what you need to implement
   - See `postgres-manager.js` for the most complete example
 
-##The Random TODO list
+##Roadmap
 - Replace grid with something better to allow row selection, column selection etc.
 - Manage saved connections
 - Move callbacks I control to Promises
