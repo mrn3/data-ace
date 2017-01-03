@@ -42,9 +42,15 @@ Feel free to open issues or make pull requests!
   - Open the saved connections file for editing
 
 ##Contributing
-Please do :)
+To contribute, do the following:
+- Clone the repo
+- Install the package (Atom -> Preferences... -> Install)
+- Hack on the code
+- Use ctrl-alt-cmd-L to refresh (reload all packages) to see your changes
+- Submit a PR and I will get it merged quickly
+
+Some details about the project that are relevant to contributors:
 - It is written in ES6 using Babel (provided by Atom)
-- I am slowing moving callbacks I control to `Promise`s
 - Looking at implementing support for your favorite DB?
   - Check out `data-manager.js` for what you need to implement
   - See `postgres-manager.js` for the most complete example
@@ -52,6 +58,7 @@ Please do :)
 ##The Random TODO list
 - Replace grid with something better to allow row selection, column selection etc.
 - Manage saved connections
+- Move callbacks I control to Promises
 - Add support for other database systems. Submit an issue or comment on one already there so we know the priorities
 - More database information and visualisation e.g.
   - Exploring relations, views, etc.
