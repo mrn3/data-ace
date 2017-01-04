@@ -2,13 +2,13 @@
 
 import {Workspace} from 'atom';
 
-import DataAceView from '../lib/views/data-ace-view';
+import MainView from '../lib/views/main-view';
 
 function findDataAcePanel(workspace) {
   return [].slice.call(workspace.getElementsByTagName('section')).filter(i => i.classList.contains('data-ace-panel'));
 }
 
-describe("DataAceView", () => {
+describe("MainView", () => {
   var workspaceElement = null;
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
@@ -17,7 +17,7 @@ describe("DataAceView", () => {
 
   describe("when toggling view", () => {
     it("it sets isShowing", () => {
-      var view = new DataAceView();
+      var view = new MainView();
       expect(findDataAcePanel(workspaceElement).length).toEqual(0);
       view.toggleView();
       expect(findDataAcePanel(workspaceElement).length).toEqual(1);
@@ -28,7 +28,7 @@ describe("DataAceView", () => {
 
   describe("when calling show()", () => {
     it("it sets isShowing true", () => {
-      var view = new DataAceView();
+      var view = new MainView();
       expect(findDataAcePanel(workspaceElement).length).toEqual(0);
       view.show();
       expect(findDataAcePanel(workspaceElement).length).toEqual(1);
@@ -37,7 +37,7 @@ describe("DataAceView", () => {
 
   describe("when calling hide()", () => {
     it("it sets isShowing false", () => {
-      var view = new DataAceView();
+      var view = new MainView();
       expect(findDataAcePanel(workspaceElement).length).toEqual(0);
       view.show();
       expect(findDataAcePanel(workspaceElement).length).toEqual(1);
@@ -49,7 +49,7 @@ describe("DataAceView", () => {
   describe('when toggling query source', () => {
     var view;
     beforeEach(() => {
-      view = new DataAceView();
+      view = new MainView();
     });
     it('it shows the query input', () => {
       view.show();
@@ -80,7 +80,7 @@ describe("DataAceView", () => {
   describe('when "useQueryAtCursor" option is "true"', () => {
     var view;
     beforeEach(() => {
-      view = new DataAceView();
+      view = new MainView();
       waitsForPromise(() => {
         return atom.workspace.open('test.sql');
       });
