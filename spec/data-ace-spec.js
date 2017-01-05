@@ -1,6 +1,6 @@
-"use babel";
+"use babel"
 
-import DataAce from '../lib/data-ace';
+import DataAce from '../lib/data-ace'
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -8,7 +8,7 @@ import DataAce from '../lib/data-ace';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe("DataAce", () => {
-  activationPromise = null;
+  activationPromise = null
 
   // beforeEach ->
   //   atom.workspaceView = new WorkspaceView
@@ -29,4 +29,4 @@ describe("DataAce", () => {
   //       expect(atom.workspaceView.find('.data-ace')).toExist()
   //       atom.workspaceView.trigger 'data-ace:toggle'
   //       expect(atom.workspaceView.find('.data-ace')).not.toExist()
-});
+})

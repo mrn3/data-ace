@@ -1,95 +1,95 @@
-"use babel";
+"use babel"
 
-import {Workspace} from 'atom';
+import {Workspace} from 'atom'
 
-import MainView from '../lib/views/main-view';
+import MainView from '../lib/views/main-view'
 
 function findDataAcePanel(workspace) {
-  return [].slice.call(workspace.getElementsByTagName('section')).filter(i => i.classList.contains('data-ace-panel'));
+  return [].slice.call(workspace.getElementsByTagName('section')).filter(i => i.classList.contains('data-ace-panel'))
 }
 
 describe("MainView", () => {
-  var workspaceElement = null;
+  var workspaceElement = null
   beforeEach(() => {
-    workspaceElement = atom.views.getView(atom.workspace);
-    jasmine.attachToDOM(workspaceElement);
-  });
+    workspaceElement = atom.views.getView(atom.workspace)
+    jasmine.attachToDOM(workspaceElement)
+  })
 
   describe("when toggling view", () => {
     it("it sets isShowing", () => {
-      var view = new MainView();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(0);
-      view.toggleView();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(1);
-      view.toggleView();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(0);
-    });
-  });
+      var view = new MainView()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(0)
+      view.toggleView()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(1)
+      view.toggleView()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(0)
+    })
+  })
 
   describe("when calling show()", () => {
     it("it sets isShowing true", () => {
-      var view = new MainView();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(0);
-      view.show();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(1);
-    });
-  });
+      var view = new MainView()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(0)
+      view.show()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(1)
+    })
+  })
 
   describe("when calling hide()", () => {
     it("it sets isShowing false", () => {
-      var view = new MainView();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(0);
-      view.show();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(1);
-      view.hide();
-      expect(findDataAcePanel(workspaceElement).length).toEqual(0);
-    });
-  });
+      var view = new MainView()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(0)
+      view.show()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(1)
+      view.hide()
+      expect(findDataAcePanel(workspaceElement).length).toEqual(0)
+    })
+  })
 
   describe('when toggling query source', () => {
-    var view;
+    var view
     beforeEach(() => {
-      view = new MainView();
-    });
+      view = new MainView()
+    })
     it('it shows the query input', () => {
-      view.show();
-      view.useEditorAsQuerySource(false);
-      expect(view.querySection.style.display).toEqual('block');
-    });
+      view.show()
+      view.useEditorAsQuerySource(false)
+      expect(view.querySection.style.display).toEqual('block')
+    })
     it('it hides the query input', () => {
-      view.show();
-      view.useEditorAsQuerySource(true);
-      expect(view.querySection.style.display).toEqual('none');
-    });
+      view.show()
+      view.useEditorAsQuerySource(true)
+      expect(view.querySection.style.display).toEqual('none')
+    })
 
     // not sure how to set up the active editor
     // it('it uses the editor text', () => {
-    //   view.show();
-    //   view.useEditorAsQuerySource(true);
-    //   view.queryEditor.getModel().setText('test');
-    //   expect(view.getQuery()).not.toEqual('test');
-    // });
+    //   view.show()
+    //   view.useEditorAsQuerySource(true)
+    //   view.queryEditor.getModel().setText('test')
+    //   expect(view.getQuery()).not.toEqual('test')
+    // })
     it('it uses the query input text', () => {
-      view.show();
-      view.useEditorAsQuerySource(false);
-      view.queryEditor.getModel().setText('test2');
-      expect(view.getQuery()).toEqual('test2');
-    });
-  });
+      view.show()
+      view.useEditorAsQuerySource(false)
+      view.queryEditor.getModel().setText('test2')
+      expect(view.getQuery()).toEqual('test2')
+    })
+  })
 
   describe('when "useQueryAtCursor" option is "true"', () => {
-    var view;
+    var view
     beforeEach(() => {
-      view = new MainView();
+      view = new MainView()
       waitsForPromise(() => {
-        return atom.workspace.open('test.sql');
-      });
-    });
+        return atom.workspace.open('test.sql')
+      })
+    })
 
     it('it only gets the query at the cursor', () => {
-      var editor = atom.workspace.getActiveTextEditor();
-      editor.insertText('select * from my_table;\nselect* from other_table;\nselect *\nfrom this_table\nwhere 1 = 1;');
-      expect(view.getQuery(true, true)).toEqual('select *\nfrom this_table\nwhere 1 = 1;');
-    });
-  });
-});
+      var editor = atom.workspace.getActiveTextEditor()
+      editor.insertText('select * from my_table;\nselect* from other_table;\nselect *\nfrom this_table\nwhere 1 = 1;')
+      expect(view.getQuery(true, true)).toEqual('select *\nfrom this_table\nwhere 1 = 1;')
+    })
+  })
+})
