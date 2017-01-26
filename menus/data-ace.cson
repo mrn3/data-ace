@@ -5,7 +5,9 @@
     { 'label': 'Data Ace - Format SQL', 'command': 'data-ace:format-sql' }
   ],
   '.db-list .table-name': [
-    { 'label': 'Get Table Details', 'command': 'data-ace:query-table' }
+    { 'label': 'View Table Data', 'command': 'data-ace:query-table' },
+    { 'label': 'Describe Table', 'command': 'data-ace:describe-table' },
+    { 'label': 'Generate Create Statement', 'command': 'data-ace:generate-create-statement' }
   ]
 
 'menu': [
