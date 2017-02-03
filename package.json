@@ -1,7 +1,7 @@
 {
   "name": "data-ace",
   "main": "./lib/data-ace",
-  "version": "0.24.12",
+  "version": "0.24.13",
   "description": "Connect to, query, manage, and visualize databases in Atom",
   "activationCommands": [],
   "repository": "https://github.com/mrn3/data-ace",
