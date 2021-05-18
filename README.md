@@ -1,10 +1,10 @@
-#Data Ace Package
+# Data Ace Package
 
 Data Ace allows you to write and execute queries against your favorite databases (PostgreSQL, MS SQL Server, MySQL, Redshift) and visualize the results, all from within Atom. It supports autocomplete and exploring database information (tables, columns, views, etc.). The plan is to build it out with more data management functionality.
 
 Feel free to open issues or make pull requests!
 
-##Features
+## Features
 - Supports
   - Microsoft SQL Server
   - MySQL (Beta support, see issues for known problems)
@@ -19,7 +19,7 @@ Feel free to open issues or make pull requests!
 - Check the execution time in the right of the status bar
 - Save connections for easily connecting later
 
-##Usage
+## Usage
 - `F5` or 'Data Ace: Execute' command
   - Executes the current query source (see below) against the current connection. It will prompt if there is no current connection
   - Only executes the selected text if there is any
@@ -28,7 +28,7 @@ Feel free to open issues or make pull requests!
 - `ALT`+`SHIFT`+`D` or the 'Data Ace: Toggle Details View' command
   - Toggle the database details view, showing table, column, view, etc. information
 
-###Other commands
+### Other commands
 - 'Data Ace: Toggle Query Source' or the button right of 'Execute' on the toolbar
   - Toggle the source of the query to execute between the active editor content and Data Ace's own query editor
   - Allows you to easily work with SQL files in the main editor or quickly execute queries while working in any file type
@@ -41,7 +41,7 @@ Feel free to open issues or make pull requests!
 - 'Data Ace: Edit Connections'
   - Open the saved connections file for editing
 
-##Contributing
+## Contributing
 To contribute, do the following:
 - Clone the repo
 - Install the package (Atom -> Preferences... -> Install)
@@ -55,7 +55,7 @@ Some details about the project that are relevant to contributors:
   - Check out `data-manager.js` for what you need to implement
   - See `postgres-manager.js` for the most complete example
 
-##Roadmap
+## Roadmap
 - Replace grid with something better to allow row selection, column selection etc.
 - Manage saved connections
 - Move callbacks I control to Promises
